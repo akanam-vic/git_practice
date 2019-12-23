@@ -1,0 +1,89 @@
+<!Doctype html>
+
+<html lang="en">
+<head>
+    <title>Survey Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/survey_form.css"/>
+  </head>
+<body>
+
+  <!--Begining of form-->
+    <div class="text-center heading"><h1 id="title">Survey Form</h1></div>    
+  <div class="container formbody">
+          <form action="/submit-form"  id="survey-form">
+              <p id="description">Please fill out the survey to rate our website.</p>
+            <div class="form-group">
+                <label id="name-label" for="name"> <span style="color: red">*</span> Name: </label>
+                <input type="name" class="form-control" id="name" aria-describedby="name" placeholder="Enter Name" required>
+            </div>
+            <div class="form-group">
+              <label id="email-label" for="email"> <span style="color: red">*</span> Email address: </label>
+              <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="yourname@domain.com" required="">
+            </div>
+            <div class="form-group">
+              <label  id="number-label" for="age"><span style="color: red">*</span> Age:</label>
+              <input type="number" class="form-control" id="number" placeholder="Enter age" min="18" max="75" required>
+            </div>
+            <div>
+              <label id="labels" for="select"><span style="color: red">*</span> How did you find out about our website?:</label>
+              <select class="form-control" id="dropdown">
+                    <option disabled>Select an option</option>
+                    <option>Google search</option>
+                    <option>Social media</option>
+                    <option>Traditional media</option>
+                    <option>My office uses it</option>
+                    <option>Refered by a friend</option>
+                    <option>Others</option>
+              </select>
+            </div>
+<!-- Radio buttons -->
+      <div class="rowStyle">
+      <div class="labels">
+        <label for="userRating"><span style="color: red">*</span> How likely are you to recommend our services to a friend?: </label>
+      </div>
+      <div class="rightSideStyle">
+        <ul style="list-style: none;">
+          <li class="radio"><label>Very likely<input name="radio-buttons" value="highest" type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Somewhat likely<input name="radio-buttons" value="middle" type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Indiferent<input name="radio-buttons" value="no score" type="radio" class="userRatings" ></label></li>
+        </ul>
+      </div>
+    </div>
+<!--Check boxes-->
+              <div class="rowStyle">
+                <div class="labels">
+                  <label for="improvement">Things that should be improved on our site<br>(Check all that apply): </label>
+                </div>
+                <div class="rightSideStyle">
+                  <ul id="preferences" style="list-style: none">
+                    <li class="checkbox"><label><input name="improve" value="1" type="checkbox" class="userRatings">The user interface</label></li>
+                    <li class="checkbox"><label><input name="improve" value="2" type="checkbox" class="userRatings">The functionality</label></li>
+                    <li class="checkbox"><label><input name="improve" value="3" type="checkbox" class="userRatings">More accessibility</label></li>
+                    <li class="checkbox"><label><input name="improve" value="4" type="checkbox" class="userRatings">The speed</label></li>
+                  </ul>
+                </div>
+              </div>
+<!--Text Area-->
+              <div class="form-group">
+                <label id="labels" for="text_area">Any other comments or suggestions <br>you might have: </label>
+                <textarea class="form-control" id="text_area" rows="3"></textarea>
+              </div>
+<!-- submit button-->
+            <div class="text-center">
+            <button type="submit" id="submit" class="btn btn-dark">Submit Form</button>
+            </div>
+          </form>
+      </div>
+      
+
+
+
+<body>
+
+</html>
